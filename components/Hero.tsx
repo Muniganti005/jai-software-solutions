@@ -81,15 +81,15 @@ export default function Hero() {
             >
 
               <Link
-                href="/services"
-                className="group inline-flex items-center gap-4 px-10 py-5 rounded-full border border-gold-400/40 text-gold-400 font-bold text-lg hover:bg-gold-400 hover:text-black transition-all duration-500"
-              >
+  href="#services"
+  className="group inline-flex items-center gap-4 px-10 py-5 rounded-full border border-gold-400/40 text-gold-400 font-bold text-lg hover:bg-gold-400 hover:text-black transition-all duration-500"
+>
 
-                EXPLORE OUR SERVICES
+  EXPLORE OUR SERVICES
 
-                <ArrowRight className="group-hover:translate-x-2 transition-all duration-300" />
+  <ArrowRight className="group-hover:translate-x-2 transition-all duration-300" />
 
-              </Link>
+</Link>
 
             </motion.div>
 
