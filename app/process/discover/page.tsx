@@ -1,200 +1,291 @@
-export default function Page() {
+'use client'
+
+import Image from 'next/image'
+
+import { motion } from 'framer-motion'
+
+import {
+  Search,
+  Brain,
+  Target,
+  Workflow,
+} from 'lucide-react'
+
+export default function DiscoverPage() {
+
+  const features = [
+    {
+      title: 'Business Analysis',
+      description:
+        'We analyze your business operations, workflows, and digital transformation goals.',
+      icon: Search,
+    },
+
+    {
+      title: 'AI Opportunity Discovery',
+      description:
+        'Identify automation opportunities and intelligent AI integrations.',
+      icon: Brain,
+    },
+
+    {
+      title: 'Strategic Planning',
+      description:
+        'Create a scalable AI roadmap tailored for your business needs.',
+      icon: Target,
+    },
+
+    {
+      title: 'Workflow Understanding',
+      description:
+        'Understand current systems and optimize enterprise processes.',
+      icon: Workflow,
+    },
+  ]
+
   return (
-    <main className="min-h-screen bg-[#050816] text-white pt-32 pb-24 px-6">
 
-      <div className="max-w-7xl mx-auto">
+    <main className="min-h-screen bg-[#050816] text-white overflow-hidden pt-32 pb-20">
 
-        {/* Hero Section */}
-        <div className="text-center mb-28">
+      {/* BACKGROUND EFFECTS */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
 
-          <p className="text-gold-400 font-semibold tracking-widest mb-4">
-            PROCESS 01
-          </p>
+        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full"></div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-            Discover
-          </h1>
-
-          <p className="text-gray-400 text-lg leading-8 max-w-4xl mx-auto">
-            We begin by understanding your business goals, operational challenges,
-            workflows, and digital transformation opportunities to create intelligent AI strategies.
-          </p>
-
-        </div>
-
-        {/* What We Do */}
-        <div className="mb-28">
-
-          <h2 className="text-4xl font-bold mb-10 text-gold-400">
-            What We Do
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-10">
-
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-10">
-
-              <h3 className="text-2xl font-semibold mb-5">
-                Business Analysis
-              </h3>
-
-              <p className="text-gray-400 leading-8">
-                We analyze existing workflows, systems, and operational bottlenecks
-                to identify opportunities for automation and AI-driven improvements.
-              </p>
-
-            </div>
-
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-10">
-
-              <h3 className="text-2xl font-semibold mb-5">
-                Digital Transformation Strategy
-              </h3>
-
-              <p className="text-gray-400 leading-8">
-                Our experts define intelligent transformation strategies
-                aligned with your business objectives and growth plans.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* Key Features */}
-        <div className="mb-28">
-
-          <h2 className="text-4xl font-bold mb-12 text-gold-400">
-            Key Focus Areas
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
-
-              <h3 className="text-2xl font-semibold mb-4">
-                Workflow Assessment
-              </h3>
-
-              <p className="text-gray-400 leading-7">
-                Evaluate existing business operations and identify optimization opportunities.
-              </p>
-
-            </div>
-
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
-
-              <h3 className="text-2xl font-semibold mb-4">
-                AI Opportunity Discovery
-              </h3>
-
-              <p className="text-gray-400 leading-7">
-                Discover areas where AI and automation can improve productivity and efficiency.
-              </p>
-
-            </div>
-
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
-
-              <h3 className="text-2xl font-semibold mb-4">
-                Enterprise Consultation
-              </h3>
-
-              <p className="text-gray-400 leading-7">
-                Strategic consulting for enterprise modernization and intelligent automation.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* Benefits */}
-        <div className="mb-28">
-
-          <h2 className="text-4xl font-bold mb-12 text-gold-400">
-            Benefits
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
-              <ul className="space-y-5 text-gray-300">
-
-                <li>✔ Better operational visibility</li>
-                <li>✔ Improved business efficiency</li>
-                <li>✔ Intelligent automation roadmap</li>
-                <li>✔ Scalable digital strategy</li>
-
-              </ul>
-            </div>
-
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
-              <ul className="space-y-5 text-gray-300">
-
-                <li>✔ AI-driven innovation opportunities</li>
-                <li>✔ Enterprise modernization planning</li>
-                <li>✔ Reduced operational bottlenecks</li>
-                <li>✔ Future-ready business architecture</li>
-
-              </ul>
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* Technologies */}
-        <div className="mb-28">
-
-          <h2 className="text-4xl font-bold mb-10 text-gold-400">
-            Technologies & Expertise
-          </h2>
-
-          <div className="flex flex-wrap gap-4">
-
-            {[
-              'AI Analytics',
-              'Automation',
-              'Enterprise Systems',
-              'Cloud',
-              'Business Intelligence',
-              'Digital Transformation',
-              'Workflow Analysis',
-              'Scalable Architecture',
-            ].map((tech) => (
-              <div
-                key={tech}
-                className="px-6 py-3 bg-white/5 border border-white/10 rounded-full text-gray-300"
-              >
-                {tech}
-              </div>
-            ))}
-
-          </div>
-
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-24">
-
-          <h2 className="text-4xl font-bold mb-8">
-            Ready To Transform Your Business?
-          </h2>
-
-          <p className="text-gray-400 text-lg mb-10 max-w-3xl mx-auto leading-8">
-            Let’s identify opportunities for intelligent automation
-            and scalable AI transformation.
-          </p>
-
-          <button className="px-10 py-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl">
-            Start Your Journey
-          </button>
-
-        </div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 blur-3xl rounded-full"></div>
 
       </div>
+
+      {/* HERO SECTION */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+          {/* LEFT CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+
+            <div className="inline-block px-5 py-2 rounded-full border border-yellow-400/30 text-yellow-400 text-sm font-semibold mb-8">
+
+              DISCOVER
+
+            </div>
+
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-8">
+
+              Discover AI
+
+              <span className="block text-yellow-400">
+
+                Possibilities
+
+              </span>
+
+            </h1>
+
+            <p className="text-gray-400 text-lg leading-9 max-w-xl mb-14">
+
+              We deeply understand your business challenges, workflows,
+              and goals to identify intelligent AI-driven opportunities
+              that improve efficiency and accelerate growth.
+
+            </p>
+
+            {/* STATS */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-14">
+
+              <div>
+
+                <h3 className="text-4xl font-bold text-yellow-400">
+
+                  100+
+
+                </h3>
+
+                <p className="text-gray-400 mt-2">
+
+                  Businesses Analyzed
+
+                </p>
+
+              </div>
+
+              <div>
+
+                <h3 className="text-4xl font-bold text-cyan-400">
+
+                  250+
+
+                </h3>
+
+                <p className="text-gray-400 mt-2">
+
+                  Workflows Optimized
+
+                </p>
+
+              </div>
+
+              <div>
+
+                <h3 className="text-4xl font-bold text-purple-400">
+
+                  95%
+
+                </h3>
+
+                <p className="text-gray-400 mt-2">
+
+                  Automation Accuracy
+
+                </p>
+
+              </div>
+
+              <div>
+
+                <h3 className="text-4xl font-bold text-green-400">
+
+                  24/7
+
+                </h3>
+
+                <p className="text-gray-400 mt-2">
+
+                  Enterprise Support
+
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* BUTTONS */}
+            <div className="flex flex-wrap gap-5">
+
+              <button className="px-8 py-4 rounded-full bg-yellow-400 text-black font-bold hover:scale-105 transition-all duration-300 shadow-2xl">
+
+                START DISCOVERY
+
+              </button>
+
+              <button className="px-8 py-4 rounded-full border border-white/20 hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300">
+
+                BOOK CONSULTATION
+
+              </button>
+
+            </div>
+
+          </motion.div>
+
+          {/* RIGHT IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="relative"
+          >
+
+            {/* GLOW EFFECT */}
+            <div className="absolute inset-0 bg-purple-500/20 blur-3xl rounded-full animate-pulse"></div>
+
+            {/* FLOATING EFFECTS */}
+            <div className="absolute -top-10 -left-10 w-24 h-24 border border-cyan-400/30 rounded-full animate-spin-slow"></div>
+
+            <div className="absolute -bottom-10 -right-10 w-32 h-32 border border-yellow-400/20 rounded-full animate-pulse"></div>
+
+            {/* IMAGE CARD */}
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.5 }}
+              className="relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl"
+            >
+
+              <Image
+                src="/images/discover-ai.png"
+                alt="Discover AI"
+                width={900}
+                height={900}
+                priority
+                className="w-full h-auto object-cover"
+              />
+
+            </motion.div>
+
+          </motion.div>
+
+        </div>
+
+      </section>
+
+      {/* FEATURES SECTION */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 mt-32">
+
+        <div className="text-center mb-20">
+
+          <h2 className="text-5xl font-bold mb-6">
+
+            Our Discovery Process
+
+          </h2>
+
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+
+            We combine strategy, analytics, and intelligent automation insights
+            to understand your organization and build scalable AI solutions.
+
+          </p>
+
+        </div>
+
+        {/* FEATURE CARDS */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {features.map((item, index) => {
+
+            const Icon = item.icon
+
+            return (
+
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-yellow-400/30 hover:bg-white/10 transition-all duration-300"
+              >
+
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400/20 to-purple-500/20 flex items-center justify-center mb-8">
+
+                  <Icon className="w-8 h-8 text-yellow-400" />
+
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">
+
+                  {item.title}
+
+                </h3>
+
+                <p className="text-gray-400 leading-8">
+
+                  {item.description}
+
+                </p>
+
+              </motion.div>
+
+            )
+          })}
+
+        </div>
+
+      </section>
 
     </main>
   )

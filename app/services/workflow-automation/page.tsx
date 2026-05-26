@@ -1,80 +1,159 @@
+import Image from 'next/image'
+
 export default function Page() {
+
   return (
-    <main className="min-h-screen bg-[#050816] text-white pt-32 pb-20 px-6">
 
-      <div className="max-w-7xl mx-auto">
+    <main className="min-h-screen bg-[#050816] text-white pt-32 pb-20 overflow-hidden">
 
-        {/* Hero Section */}
-        <div className="text-center mb-24">
+      <section className="max-w-7xl mx-auto px-6 lg:px-8">
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-8">
-            Intelligent Workflow Automation
-          </h1>
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-8">
-            Automate repetitive business operations using AI-powered workflows,
-            intelligent task management, and smart enterprise automation systems.
-          </p>
+          {/* LEFT CONTENT */}
+          <div>
 
-        </div>
+            <div className="inline-block px-5 py-2 rounded-full border border-yellow-400/30 text-yellow-400 text-sm font-semibold mb-8">
 
-        {/* Features Section */}
-        <div className="grid md:grid-cols-3 gap-8">
+              AI AUTOMATION
 
-          {/* Feature 1 */}
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md">
+            </div>
 
-            <h3 className="text-2xl font-semibold mb-4 text-gold-400">
-              Smart Automation
-            </h3>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-8">
 
-            <p className="text-gray-400 leading-7">
-              Automate repetitive workflows and improve operational efficiency
-              using intelligent AI-driven systems.
+              Intelligent Workflow
+
+              <span className="block text-yellow-400">
+
+                Automation
+
+              </span>
+
+            </h1>
+
+            <p className="text-gray-400 text-lg leading-9 max-w-xl mb-12">
+
+              Automate repetitive business processes using AI-powered workflows,
+              intelligent task orchestration, and enterprise automation systems
+              that improve productivity and operational efficiency.
+
             </p>
+
+            {/* FEATURES */}
+            <div className="space-y-6 mb-12">
+
+              <div className="flex items-start gap-4">
+
+                <div className="w-3 h-3 rounded-full bg-yellow-400 mt-3"></div>
+
+                <div>
+
+                  <h3 className="text-xl font-semibold mb-2">
+
+                    Smart Process Automation
+
+                  </h3>
+
+                  <p className="text-gray-400 leading-7">
+
+                    Automate repetitive workflows using intelligent AI-driven systems.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div className="flex items-start gap-4">
+
+                <div className="w-3 h-3 rounded-full bg-yellow-400 mt-3"></div>
+
+                <div>
+
+                  <h3 className="text-xl font-semibold mb-2">
+
+                    Enterprise Integration
+
+                  </h3>
+
+                  <p className="text-gray-400 leading-7">
+
+                    Connect enterprise applications, APIs, and cloud platforms seamlessly.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div className="flex items-start gap-4">
+
+                <div className="w-3 h-3 rounded-full bg-yellow-400 mt-3"></div>
+
+                <div>
+
+                  <h3 className="text-xl font-semibold mb-2">
+
+                    AI Analytics & Insights
+
+                  </h3>
+
+                  <p className="text-gray-400 leading-7">
+
+                    Gain intelligent recommendations and real-time workflow analytics.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* BUTTONS */}
+            <div className="flex flex-wrap gap-5">
+
+              <button className="px-8 py-4 rounded-full bg-yellow-400 text-black font-bold hover:scale-105 transition-all duration-300">
+
+                START AUTOMATION
+
+              </button>
+
+              <button className="px-8 py-4 rounded-full border border-white/20 hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300">
+
+                SCHEDULE DEMO
+
+              </button>
+
+            </div>
 
           </div>
 
-          {/* Feature 2 */}
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md">
+          {/* RIGHT IMAGE */}
+          <div className="relative">
 
-            <h3 className="text-2xl font-semibold mb-4 text-gold-400">
-              Process Integration
-            </h3>
+            {/* Glow Effect */}
+            <div className="absolute inset-0 bg-purple-500/20 blur-3xl rounded-full"></div>
 
-            <p className="text-gray-400 leading-7">
-              Integrate enterprise applications, APIs, and cloud platforms
-              for seamless digital operations.
-            </p>
+            {/* Image Card */}
+            <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl">
 
-          </div>
+              <Image
+                src="/images/intelligent-workflow.png"
+                alt="Workflow Automation"
+                width={900}
+                height={900}
+                className="w-full h-auto object-cover hover:scale-105 transition-all duration-700"
+                priority
+              />
 
-          {/* Feature 3 */}
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md">
-
-            <h3 className="text-2xl font-semibold mb-4 text-gold-400">
-              AI Insights
-            </h3>
-
-            <p className="text-gray-400 leading-7">
-              Gain intelligent recommendations and workflow analytics
-              to optimize productivity and business performance.
-            </p>
+            </div>
 
           </div>
 
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-24">
-
-          <button className="px-10 py-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl">
-            Start Automating Your Business
-          </button>
-
-        </div>
-
-      </div>
+      </section>
 
     </main>
   )

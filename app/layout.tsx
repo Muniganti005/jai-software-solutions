@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Preloader from '@/components/Preloader'
+import Navbar from '@/components/Navbar'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -30,6 +31,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} bg-dark-900 text-white overflow-x-hidden`}>
         <Preloader />
+          <Navbar />
         {children}
       </body>
     </html>
